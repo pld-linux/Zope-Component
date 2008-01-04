@@ -10,6 +10,8 @@ Source0:	http://download.zope.org/distribution/zope.component-%{version}dev-%{sn
 # Source0-md5:	d91d7c64259a1a2f8e56860a1326725e
 BuildRequires:	python >= 1:2.5
 BuildRequires:	python-devel >= 1:2.5
+BuildRequires:	rpm-pythonprov
+BuildRequires:	rpmbuild(macros) >= 1.219
 %pyrequires_eq	python-modules
 Requires:	Zope-DeferredImport
 Requires:	Zope-Deprecation
@@ -39,7 +41,7 @@ python ./setup.py install \
 	--optimize 2 \
 	--root=$RPM_BUILD_ROOT
 
-%{py_postclean}
+%py_postclean
 
 %clean
 rm -rf $RPM_BUILD_ROOT
