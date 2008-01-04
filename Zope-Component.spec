@@ -8,8 +8,8 @@ License:	ZPL 2.1
 Group:		Libraries/Python
 Source0:	http://download.zope.org/distribution/zope.component-%{version}dev-%{snap}.tar.gz
 # Source0-md5:	d91d7c64259a1a2f8e56860a1326725e
-BuildRequires:	python
-BuildRequires:	python-devel
+BuildRequires:	python >= 1:2.5
+BuildRequires:	python-devel >= 1:2.5
 %pyrequires_eq	python-modules
 Requires:	Zope-DeferredImport
 Requires:	Zope-Deprecation
@@ -17,6 +17,7 @@ Requires:	Zope-Event
 Requires:	Zope-Interface
 Requires:	Zope-Proxy
 Requires:	Zope-Testing
+BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -46,5 +47,5 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %{py_sitescriptdir}/zope/component
-%{py_sitescriptdir}/zope*egg*
-%{py_sitescriptdir}/zope*pth
+%{py_sitescriptdir}/zope.component-*.egg-info
+%{py_sitescriptdir}/zope.component-*-nspkg.pth
