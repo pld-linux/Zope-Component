@@ -1,5 +1,6 @@
 %define snap r73807
 Summary:	Core of the Zope Component Architecture
+Summary(pl.UTF-8):	Rdzeń Zope Component Architecture
 Name:		Zope-Component
 Version:	3.4
 Release:	0.%{snap}.1
@@ -20,6 +21,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 Core of the Zope Component Architecture.
+
+%description -l pl.UTF-8
+Rdzeń architektury komponentowej Zope Component Architecture.
 
 %prep
 %setup -q -n zope.component-%{version}dev-%{snap}
