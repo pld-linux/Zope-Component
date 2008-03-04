@@ -19,6 +19,7 @@ Requires:	Zope-Event
 Requires:	Zope-Interface
 Requires:	Zope-Proxy
 Requires:	Zope-Testing
+BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
