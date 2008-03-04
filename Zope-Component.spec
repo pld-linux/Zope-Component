@@ -3,7 +3,7 @@ Summary:	Core of the Zope Component Architecture
 Summary(pl.UTF-8):	Rdzeń Zope Component Architecture
 Name:		Zope-Component
 Version:	3.4
-Release:	0.%{snap}.1
+Release:	0.%{snap}.2
 License:	ZPL 2.1
 Group:		Libraries/Python
 Source0:	http://download.zope.org/distribution/zope.component-%{version}dev-%{snap}.tar.gz
@@ -19,7 +19,6 @@ Requires:	Zope-Event
 Requires:	Zope-Interface
 Requires:	Zope-Proxy
 Requires:	Zope-Testing
-BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -38,6 +37,7 @@ python ./setup.py build
 rm -rf $RPM_BUILD_ROOT
 
 python ./setup.py install \
+	--install-purelib=%{py_sitedir} \
 	--optimize 2 \
 	--root=$RPM_BUILD_ROOT
 
@@ -48,6 +48,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%{py_sitescriptdir}/zope/component
-%{py_sitescriptdir}/zope.component-*.egg-info
-%{py_sitescriptdir}/zope.component-*-nspkg.pth
+%{py_sitedir}/zope/component
+%{py_sitedir}/zope.component-*.egg-info
+%{py_sitedir}/zope.component-*-nspkg.pth
