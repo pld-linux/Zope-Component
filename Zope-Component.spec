@@ -1,13 +1,12 @@
-%define snap r73807
 Summary:	Core of the Zope Component Architecture
 Summary(pl.UTF-8):	Rdzeń Zope Component Architecture
 Name:		Zope-Component
-Version:	3.4
-Release:	0.%{snap}.2
+Version:	3.4.0
+Release:	1
 License:	ZPL 2.1
 Group:		Libraries/Python
-Source0:	http://download.zope.org/distribution/zope.component-%{version}dev-%{snap}.tar.gz
-# Source0-md5:	d91d7c64259a1a2f8e56860a1326725e
+Source0:	http://pypi.python.org/packages/source/z/zope.component//zope.component-%{version}.tar.gz
+# Source0-md5:	94afb57dfe605d7235ff562d1eaa3bed
 BuildRequires:	python >= 1:2.5
 BuildRequires:	python-devel >= 1:2.5
 BuildRequires:	rpm-pythonprov
@@ -28,7 +27,7 @@ Core of the Zope Component Architecture.
 Rdzeń architektury komponentowej Zope Component Architecture.
 
 %prep
-%setup -q -n zope.component-%{version}dev-%{snap}
+%setup -q -n zope.component-%{version}
 
 %build
 python ./setup.py build
