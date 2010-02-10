@@ -9,6 +9,7 @@ Source0:	http://pypi.python.org/packages/source/z/zope.component//zope.component
 # Source0-md5:	40e71d0cf60db6080b88f17297d778a0
 BuildRequires:	python >= 1:2.5
 BuildRequires:	python-devel >= 1:2.5
+BuildRequires:	python-setuptools
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.219
 %pyrequires_eq	python-modules
