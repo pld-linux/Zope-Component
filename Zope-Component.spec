@@ -31,12 +31,12 @@ Rdzeń architektury komponentowej Zope Component Architecture.
 %setup -q -n zope.component-%{version}
 
 %build
-python ./setup.py build
+%py_build
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-python ./setup.py install \
+%py_install \
 	--install-purelib=%{py_sitedir} \
 	--optimize 2 \
 	--root=$RPM_BUILD_ROOT
